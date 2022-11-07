@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&display=swap"
+      rel="stylesheet"
+    />
+    <title>Debug CSS Bookmarklet</title>
+  </head>
+  <style>
+    body {
+      font-family: "Caveat", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      letter-spacing: -0.0625rem;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 1.5rem;
+    }
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+      max-width: 100%;
+    }
+    .button {
+      border: 2px solid black;
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+    }
+    .button:hover {
+      background-color: aquamarine;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  </style>
+  <body>
+    <div class="wrapper">
+      <h1>Debug CSS Bookmarklet</h1>
+
+      <a
+        href="javascript:var%20%24jscomp%3D%24jscomp%7C%7C%7B%7D%3B%24jscomp.scope%3D%7B%7D%3B%24jscomp.createTemplateTagFirstArg%3Dfunction(a)%7Breturn%20a.raw%3Da%7D%3B%24jscomp.createTemplateTagFirstArgWithRaw%3Dfunction(a%2Cb)%7Ba.raw%3Db%3Breturn%20a%7D%3Bif(!(%22is_debugging%22in%20window))%7Bis_debugging%3D!1%3Bvar%20debug_el%3Ddocument.createElement(%22style%22)%3Bdebug_el.append(document.createTextNode(%22*%3Anot(path)%3Anot(g)%20%7B%20color%3A%20hsla(210%2C%20100%25%2C%20100%25%2C%200.9)%20!important%3B%20background%3A%20hsla(210%2C%20100%25%2C%20%2050%25%2C%200.5)%20!important%3B%20outline%3A%20solid%200.25rem%20hsla(210%2C%20100%25%2C%20100%25%2C%200.5)%20!important%3B%20box-shadow%3A%20none%20!important%3B%20filter%3A%20none%20!important%3B%20%7D%22))%7Dfunction%20enable_debugger()%7Bis_debugging%7C%7C(document.head.appendChild(debug_el)%2Cis_debugging%3D!0)%7Dfunction%20disable_debugger()%7Bis_debugging%26%26(document.head.removeChild(debug_el)%2Cis_debugging%3D!1)%7Dis_debugging%3Fdisable_debugger()%3Aenable_debugger()%3Bvoid+0"
+        target="_blank"
+        class="button"
+      >
+        Debug CSS
+      </a>
+      <p>(Drag this button to the bookmarks bar)</p>
+    </div>
+  </body>
+</html>
