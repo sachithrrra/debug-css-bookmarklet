@@ -13,5 +13,5 @@ Find CSS layout errors.
 
 ## Misc
 
-Coded by https://zaydek.github.io/
+Coded by https://zaydek.github.io/  
 MIT License
