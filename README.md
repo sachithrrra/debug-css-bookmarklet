@@ -7,7 +7,7 @@ Find CSS layout errors.
 
 ## Usage
 
-- Navigate to https://sachla.github.io/debug-css-bookmarklet/
+- Navigate to [https://sachithrrra.github.io/debug-css-bookmarklet/](https://sachithrrra.github.io/debug-css-bookmarklet/)
 - Drag the button to bookmarks bar.
 - Click on the bookmark to activate debugger.
 
